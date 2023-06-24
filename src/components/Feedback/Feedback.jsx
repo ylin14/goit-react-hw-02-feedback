@@ -1,20 +1,20 @@
 import { useState, useCallback } from 'react';
 
-import Statistic from 'components/Statistics';
-import FeedbackOptions from 'components/FeedbackOptions';
-import Section from 'components/Section';
-import Notification from 'components/Notification';
+import Statistic from "../Statistic/Statistic"
+import FeedbackOptions from '../FeedbackOptions/FeedbackOptions';
+import Section from '../Section/Section';
+import Notification from '../Notification/Notification';
 
 const options = ['good', 'neutral', 'bad'];
 
-export function Feedback() {
-    const [state, setState] = useState({
-      good: 0,
-      neutral: 0,
-      bad: 0,
-    });
+function Feedback() {
+  const [state, setState] = useState({
+    good: 0,
+    neutral: 0,
+    bad: 0,
+  });
 
-const handleClick = useCallback(
+  const handleClick = useCallback(
     item => {
       setState(prevState => ({
         ...prevState,
@@ -52,4 +52,6 @@ const handleClick = useCallback(
       </Section>
     </>
   );
-        }
+}
+
+export default Feedback;
