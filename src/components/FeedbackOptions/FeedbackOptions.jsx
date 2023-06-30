@@ -1,4 +1,3 @@
-import { memo } from 'react';
 import PropTypes from 'prop-types';
 
 import s from './feedbackOptions.module.css';
@@ -26,4 +25,4 @@ FeedbackOptions.propTypes = {
   onLeaveFeedback: PropTypes.func.isRequired,
 };
 
-export default memo(FeedbackOptions);
+export default FeedbackOptions;
