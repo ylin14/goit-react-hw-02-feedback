@@ -4,8 +4,6 @@ import FeedbackOptions from '../FeedbackOptions/FeedbackOptions';
 import Statistic from '../Statistic/Statistic';
 import Notification from '../Notification/Notification';
 
-const options = ['good', 'neutral', 'bad'];
-
 class FeedbackClass extends React.Component {
   state = {
     good: 0,
@@ -39,7 +37,7 @@ class FeedbackClass extends React.Component {
     return (
       <>
         <Section title={'Please Live Feedback'}>
-          <FeedbackOptions options={options} onLeaveFeedback={this.handleClick} />
+          <FeedbackOptions options={Object.keys(this.state)} onLeaveFeedback={this.handleClick} />
         </Section>
 
         <Section title={'Statistics'}>
